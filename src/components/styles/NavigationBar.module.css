@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    height: 5vh;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex: 1;
+}
+.container a {
+    margin: 15px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+}
+
+.container a:first-child {
+    margin-left: 300px;
+}
+
+
+.button:visited { 
+    text-decoration: none; 
+    color: white;
+}

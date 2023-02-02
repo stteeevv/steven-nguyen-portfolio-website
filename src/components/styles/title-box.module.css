@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .top.title-box, .title-box, .title-text {
-    margin: 0;
     color: white;
-    font-size: 60px;
+    font-size: 50px;
+    font-family: "Poppins";
 }
 .title-box {
     display: flex;
@@ -12,3 +14,12 @@
     align-items: center;
     justify-content: center;
 }
+
+*.top-title-box, *.title-text {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+

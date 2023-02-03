@@ -5,11 +5,9 @@
     justify-content: center;
     background-color: black;
     position: relative;
-    background-image: url('');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    z-index: 2;
+}
+#tsparticles {
+    opacity: 0;
 }
 .container {
     height: 100%;
@@ -21,11 +19,16 @@
     top: 0;
     left: 0;
 }
-.fade-in-hello {
-    animation: fade 0.9s ease-in;
+.particles {
+    opacity: 0;
+    animation: fade 3s ease-in forwards;
+    animation-delay: 2s;
 }
 @keyframes fade {
     0% {
         opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

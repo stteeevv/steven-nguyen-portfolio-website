@@ -5,11 +5,12 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { isAbsoluteUrl } from "next/dist/shared/lib/utils.js";
 
-
 export default function Canvas() {
+    
     const options = {
         background: {
             color: {
+                // value: "#174b52",
                 value: "black",
             },
         },
@@ -42,10 +43,18 @@ export default function Canvas() {
         },
         particles: {
             color: {
-                value: "#ffffff",
+                // value: "#ffffff",
+                // value: "#99c6cc",
+                // value: "#8a8a8a",
+                // value: "#7e64a1",
+                value: "#095249",
             },
             links: {
-                color: "#ffffff",
+                // color: "#ffffff",
+                // color: "#99c6cc",
+                // color: "#8a8a8a",
+                // color: "#7e64a1",
+                color: "#095249",
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
@@ -93,8 +102,11 @@ export default function Canvas() {
     }, []);
     return (<>
         <div className={styles.canvas}>
-            <Particles
-                style={{"height": "500px;"}}
+            <Particles className={styles.particles}
+                style={{
+                    // "opacity": ".1",
+                    // "animation": "fade 5s ease forwards" 
+                }}
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}

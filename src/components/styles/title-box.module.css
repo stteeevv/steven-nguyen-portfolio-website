@@ -2,8 +2,8 @@
 
 .title-text {
     color: white;
-    font-size: 52px;
-    line-height: 57px;
+    font-size: 2.7vw;
+    line-height: 6vh;
     font-family: 'Raleway', sans-serif;
     }
 .title-box {
@@ -39,24 +39,31 @@
 }
 .button {
     z-index: 50;
-    width: 150px;
-    margin: 13px;
+    width: 8vw;
+    position: absolute;
+    bottom: 37vh;
     color: white;
     outline: 1px solid lightblue;
-    font-size: 30px;
+    font-size: 1.5vw;
     border-radius: 3px;
     opacity: 0;
-    animation: button-fade 3s ease-in forwards;
+    animation: button-fade 2s ease-in forwards;
     animation-delay: 4s;
+    transition: background-color .5s ease;
+    z-index: 10;
+}
+.button:hover {
+    background-color: rgba(255,255,255,.2);
+    cursor: pointer;
 }
 @keyframes button-fade {
     0% {
         opacity: 0;
-        translate: translateY(-50px);
+        transform: translateY(35px);
     }
     100% {
         opacity: 1;
-        translate: translateY(0px);
+        transform: translateY(0px);
     }
 }
   

@@ -6,3 +6,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  width: 100vw;
+}
+

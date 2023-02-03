@@ -15,7 +15,7 @@ export default function TitleBox() {
                 <span className={styles["title-text"]} style={{color: '#53acb8', ["marginLeft"]: '.3em'}}> Steven Nguyen</span><span className={styles["title-text"]}>.</span>
             </div>
             <span className={styles["title-text"] + " " + styles["bottom-text"]}>I&apos;m an aspiring software engineer.</span>
-            <button className={styles.button} onClick={handleClick} href='#about'>About me</button>
+            <button className={styles.button} onClick={handleClick} href='#about-container'>About me</button>
         </div>
     </>);
 }

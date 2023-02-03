@@ -18,7 +18,7 @@ export default function Canvas() {
         style: {
             position: "absolute"
         },
-        fpsLimit: 120,
+        fpsLimit: 500,
         interactivity: {
             events: {
                 onClick: {

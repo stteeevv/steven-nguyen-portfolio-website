@@ -1,5 +1,40 @@
 .container {
     height: 200vh;
-    background-color: blue;
     width: 100vw;
+    background-color: #0f0f0f;
+}
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    height: 15vh;
+
+}
+.gradient {
+    background-image: linear-gradient(black, #0f0f0f);
+    width: 100vw;
+    height: 20vh;
+}
+.textTitle {
+    color: white;
+    font-size: 3vw;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid white;
+}
+.text {
+    color: white;
+    font-size: 1vw;
+    font-family: 'Raleway', sans-serif;
+}
+.description, .description > div {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description > div {
+    width: 10vw;
+    margin-inline: 20vw;
 }

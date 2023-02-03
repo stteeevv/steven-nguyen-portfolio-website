@@ -8,7 +8,7 @@ export default function Home() {
   return (<>
     {/* <Suspense fallback={<Loading/>}> */}
       <Canvas/>
-      <NavigationBar/>
+      {/* <NavigationBar/> */}
       <About />
     {/* </Suspense> */}
   </>);

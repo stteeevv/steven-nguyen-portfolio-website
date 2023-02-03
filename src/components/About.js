@@ -9,7 +9,7 @@ export default function About() {
             </div>
             <div className={styles.description}>
                 <div id="leftbox">
-                    <span className={styles.text}>Hello! I am currently pursuing a bachelor's degree 
+                    <span className={styles.text}>Hello! I am currently pursuing a bachelor&apos;s degree 
                     in Computer Engineering at The University of Texas at Dallas</span>
                 </div>
                 <div id="rightbox">

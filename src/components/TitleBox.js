@@ -11,10 +11,10 @@ export default function TitleBox() {
     return (<>
         <div className={styles["title-box"]} id="title-box">
             <div className={styles["top-title-box"]}>
-                <span className={styles["title-text"]}>Hello, I'm </span>
+                <span className={styles["title-text"]}>Hello, I&apos;m </span>
                 <span className={styles["title-text"]} style={{color: '#53acb8', ["marginLeft"]: '.3em'}}> Steven Nguyen</span><span className={styles["title-text"]}>.</span>
             </div>
-            <span className={styles["title-text"] + " " + styles["bottom-text"]}>I'm an aspiring software engineer.</span>
+            <span className={styles["title-text"] + " " + styles["bottom-text"]}>I&apos;m an aspiring software engineer.</span>
             <button className={styles.button} onClick={handleClick} href='#about'>About me</button>
         </div>
     </>);

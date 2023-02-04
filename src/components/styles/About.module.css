@@ -3,7 +3,7 @@
     width: 100vw;
     background-color: #0f0f0f;
 }
-.about-container {
+.title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +11,13 @@
     /* border: 1px solid red; */
     height: 15vh;
 
+}
+.titleDescription {
+    color: gray;
+    font-size: 1.5vh;
+    padding: 1vh;
+    width: 35vw;
+    text-align: center;
 }
 .gradient {
     background-image: linear-gradient(black, #0f0f0f);
@@ -22,6 +29,7 @@
     font-size: 3vw;
     font-family: 'Raleway', sans-serif;
     border-bottom: 2px solid white;
+    padding-top: 2vh;
 }
 .text {
     color: white;
@@ -29,10 +37,11 @@
     font-family: 'Raleway', sans-serif;
 }
 .description, .description > div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2vh;
 }
 .description > div {
     width: 10vw;

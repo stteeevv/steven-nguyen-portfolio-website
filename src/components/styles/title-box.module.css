@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .title-text {
-    color: white;
+    /* color: white; */
     font-size: 2.7vw;
-    line-height: 6vh;
+    line-height: 3vw;
     font-family: 'Raleway', sans-serif;
     }
 .title-box {
@@ -40,8 +40,8 @@
 .button {
     z-index: 50;
     width: 8vw;
-    position: absolute;
-    bottom: 37vh;
+    position: relative;
+    bottom: -1vw;
     color: white;
     outline: 1px solid lightblue;
     font-size: 1.5vw;
@@ -49,13 +49,22 @@
     opacity: 0;
     animation: button-fade 2s ease-in forwards;
     animation-delay: 4s;
-    transition: background-color .5s ease;
+    transition: background-color .5s ease, outline-offset 200ms ease;
     z-index: 10;
+    --clr: white;
+    --outline: 2px solid var(--clr);
+    color: var(--clr);
+    outline: var(--outline);
+    border: var(--outline);
+    outline-offset: -2px;
+    transition: outline-offset 200ms ease;
 }
-.button:hover {
+.button:hover, .button:focus {
     background-color: rgba(255,255,255,.2);
-    cursor: pointer;
+    outline: var(--outline);
+    outline-offset: 2px;
 }
+
 @keyframes button-fade {
     0% {
         opacity: 0;
@@ -87,5 +96,23 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+.name {
+	background-image: linear-gradient(white, white);
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	background-size: 100% 2px;
+    border-radius: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+	transition: background-size .5s, background-position .3s ease-in .5s;
+}
+
+.name:hover {
+	background-size: 100% 100%;
+	background-position: 0% 0%;
+	transition: background-position .5s, background-size .3s ease-in .5s;
 }
 

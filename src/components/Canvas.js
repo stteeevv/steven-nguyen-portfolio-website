@@ -1,13 +1,15 @@
 import TitleBox from "./TitleBox.js";
 import styles from "./styles/canvas.module.css";
-import { useCallback, useLayoutEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import Particles, {setParticles} from "react-particles";
 import { loadFull } from "tsparticles";
-import { isAbsoluteUrl } from "next/dist/shared/lib/utils.js";
-import particlesDark from "../../public/particlesDark.js"
-import particlesLight from "../../public/particlesLight.js"
+import particlesDark from "public/particlesDark.js";
+import particlesLight from "public/particlesLight.js";
+import particlesDarkRandomColor from "public/particlesDarkRandomColor.js";
+import particlesLightRandomColor from "public/particlesLightRandomColor.js";
 
-export default function Canvas() {
+let options = particlesDark;
+export default function Canvas(props) {
     //particles init
     const particlesInit = useCallback(async engine => {
         console.log(engine);
@@ -16,25 +18,32 @@ export default function Canvas() {
     const particlesLoaded = useCallback(async container => {
         await console.log(container);
     }, []);
-    //dark mode toggle
-    const [options, setOptions] = useState(particlesDark);
-    const [isDarkMode, setIsDarkMode] = useState(true);
-    const handleToggleDarkMode = () => {
-      console.log(isDarkMode)
-        if(isDarkMode) {
-            setOptions(particlesLight);
+
+    // const [lineColor, setLineColor] = useState(props.options);
+    // const handleChangeBackground = (newLineColor) => {
+    //     setLineColor(newLineColor)
+    //     particlesOptions.particles.color = newLineColor;
+    //     particlesOptions.particles.links = newLineColor;
+    //     console.log("HI")
+    // }
+    const [lineColor, setLineColor] = useState(props.options.particles.links.color);
+    const handleChangeBackground = () => {
+        setLineColor('blue');
+        console.log(lineColor);
+        if(props.isDarkMode) {
+            options = particlesDarkRandomColor;
+            console.log("first");
         }
         else {
-            setOptions(particlesDark);
-        }
-        setIsDarkMode(!isDarkMode);
-    };
-    const toggleableStyles = {
-
+            options = particlesLightRandomColor;
+            console.log("second");
+        } 
+        console.log("test 123");
     }
-    
+    if(props.isDarkMode) options = particlesDark;
+    else  options = particlesLight;
     return (<>
-        <button onClick={handleToggleDarkMode}>hello</button>
+        <button onClick={handleChangeBackground}>hello</button>
         <div className={styles.canvas}>
             <Particles className={styles.particles}
                 id="tsparticles"
@@ -43,7 +52,9 @@ export default function Canvas() {
                 options={options}
             />
             <div className={styles.container}>
-                    <TitleBox id="titleBox" isDarkMode={isDarkMode}/>
+                    <TitleBox myProp={props.options} 
+                    // onChangeBackground={handleChangeBackground} 
+                    id="titleBox" isDarkMode={props.isDarkMode}/>
             </div>
         </div>
     </>);

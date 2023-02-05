@@ -1,20 +1,20 @@
-function randomColor() {
-    var color = "#" + (Math.random().toString(16) + "000000").slice(2, 8)
-    console.log("SHOULD BE THIS COLOR: " + color);
+let randomColor = () => {
+    let color = "#" + (Math.random().toString(16) + "000000").slice(2, 8)
+    console.log("this function is running");
     return color;
 }
-const particlesDark = {
+const particlesLight = {
     background: {
         color: {
             // value: "#174b52",
-            value: 'black', //can only be hex value
+            value: "#f2f2f2", //can only be hex value
         },
     },
     fullScreen: false,
     style: {
         position: "absolute"
     },
-    fpsLimit: 500,
+    fpsLimit: 120,
     interactivity: {
         events: {
             onClick: {
@@ -43,14 +43,14 @@ const particlesDark = {
             // value: "#99c6cc",
             // value: "#8a8a8a",
             // value: "#7e64a1",
-            value: "#095249",
+            value: randomColor(),
         },
         links: {
             // color: "#ffffff",
             // color: "#99c6cc",
             // color: "#8a8a8a",
             // color: "#7e64a1",
-            color: "#095249",
+            color: randomColor(),
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -88,4 +88,5 @@ const particlesDark = {
     },
     detectRetina: true,
 }
-export default particlesDark;
+
+export default particlesLight

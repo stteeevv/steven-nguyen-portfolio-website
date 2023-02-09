@@ -1,13 +1,7 @@
-function randomColor() {
-    var color = "#" + (Math.random().toString(16) + "000000").slice(2, 8)
-    console.log("SHOULD BE THIS COLOR: " + color);
-    return color;
-}
 const particlesDark = {
     background: {
         color: {
-            // value: "#174b52",
-            value: 'black', //can only be hex value
+            value: 'black',
         },
     },
     fullScreen: false,
@@ -33,23 +27,15 @@ const particlesDark = {
             },
             repulse: {
                 distance: 100,
-                duration: .9,
+                duration: 1,
             },
         },
     },
     particles: {
         color: {
-            // value: "#ffffff",
-            // value: "#99c6cc",
-            // value: "#8a8a8a",
-            // value: "#7e64a1",
             value: "#095249",
         },
         links: {
-            // color: "#ffffff",
-            // color: "#99c6cc",
-            // color: "#8a8a8a",
-            // color: "#7e64a1",
             color: "#095249",
             distance: 150,
             enable: true,

@@ -1,15 +1,12 @@
 import TitleBox from "./TitleBox.js";
 import styles from "./styles/canvas.module.css";
 import { useCallback, useState } from "react";
-import Particles, {setParticles} from "react-particles";
+import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesDark from "public/particlesDark.js";
-import particlesLight from "public/particlesLight.js";
-import particlesDarkRandomColor from "public/particlesDarkRandomColor.js";
-import particlesLightRandomColor from "public/particlesLightRandomColor.js";
 
-let options = particlesDark;
 export default function Canvas(props) {
+    let options = particlesDark;
     //particles init
     const particlesInit = useCallback(async engine => {
         console.log(engine);
@@ -18,42 +15,39 @@ export default function Canvas(props) {
     const particlesLoaded = useCallback(async container => {
         await console.log(container);
     }, []);
-
-    // const [lineColor, setLineColor] = useState(props.options);
-    // const handleChangeBackground = (newLineColor) => {
-    //     setLineColor(newLineColor)
-    //     particlesOptions.particles.color = newLineColor;
-    //     particlesOptions.particles.links = newLineColor;
-    //     console.log("HI")
-    // }
-    const [lineColor, setLineColor] = useState(props.options.particles.links.color);
-    const handleChangeBackground = () => {
-        setLineColor('blue');
-        console.log(lineColor);
-        if(props.isDarkMode) {
-            options = particlesDarkRandomColor;
-            console.log("first");
-        }
-        else {
-            options = particlesLightRandomColor;
-            console.log("second");
-        } 
-        console.log("test 123");
+    const getColor = () => {
+        var color = "#" + (Math.random().toString(16) + "000000").slice(2, 8)
+        return color;
     }
-    if(props.isDarkMode) options = particlesDark;
-    else  options = particlesLight;
+    if(props.isDarkMode)
+        options.background.color = 'black';
+    else if (!props.isDarkMode) {
+        options.background.color = '#FFFFFF';
+    }
+    const [forceStateUpdate, setForceStateUpdate] = useState(true);
+    var [color, setColor] = useState('#53acb8');
+    const handleChangeBackground = () => {
+        var newColor = getColor();
+        setColor(newColor);
+        console.log(color);
+        options.particles.links.color = newColor;
+        options.particles.color.value = newColor;
+        setForceStateUpdate(!forceStateUpdate)
+    }
     return (<>
-        <button onClick={handleChangeBackground}>hello</button>
         <div className={styles.canvas}>
             <Particles className={styles.particles}
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={options}
+                isDarkMode={props.isDarkMode}
+                propToUpdate={forceStateUpdate}
             />
             <div className={styles.container}>
                     <TitleBox myProp={props.options} 
-                    // onChangeBackground={handleChangeBackground} 
+                    onChangeBackground={handleChangeBackground} 
+                    nameColor={color}
                     id="titleBox" isDarkMode={props.isDarkMode}/>
             </div>
         </div>

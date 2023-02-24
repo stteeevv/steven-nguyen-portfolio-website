@@ -1,4 +1,19 @@
-.container {
+/* .container {
     width: 100vw;
     height: 5vh;
+} */
+.navBar {
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    /* z-index: 10; */
+    right: 0;
+    top: 0;
+    /* background-color: rgba(0, 0, 0, 0); */
+}
+
+.navBar > a, .navBar > button {
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
 }

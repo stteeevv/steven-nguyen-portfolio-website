@@ -1,27 +1,51 @@
 import styles from './styles/NavigationBar.module.css';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { Switch, Navbar } from '@nextui-org/react';
+import { SunIcon } from 'public/sunIcon';
+import { MoonIcon } from 'public/moonIcon';
+import { Layout } from './layout';
+
+
 
 export default function NavigationBar(props) {
     const handleClick = (e) => {
         e.preventDefault();
         const target = document.querySelector(e.target.getAttribute("href"));
         target.scrollIntoView({ behavior: "smooth" });
-      };
-    const toggleableStyles = {
-        dark: {
-            'background-color': 'black',
-            color: 'blue',
-        },
-        light: {
-            'background-color': '#f2f2f2',
-            color: 'yellow',
-        }
-    }
+    };
+      {/* <button onClick={props.callBackHandleToggleDarkMode}>hello</button> */}
+    let isDark = props.isDarkMode;
+    const [sticky, setSticky] = useState(false);
+    const navRef = React.useRef(null);
+    const handleScroll = () => {
+        if(window.scrollY > navRef.current.offsetTop)
+            setSticky(true);
+        else
+            setSticky(false);
 
-    return (
-        <div style={props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light} className={styles.container}>
-            hello
-            <button onClick={props.callBackHandleToggleDarkMode}>hello</button>
-        </div>
-    );
+    }
+    return (<>
+        {/* <Layout>
+            <Navbar shouldHideOnScroll variant={sticky}>
+            </Navbar>
+        </Layout> */}
+        <nav id="navbar" className={styles.navBar} style={{
+            // backgroundColor: isDark ? 'black' : 'white',
+            color: isDark ? 'white' : 'black',
+            position: sticky ? 'absolute' : 'sticky'
+        }}>
+            <a role="button" onClick={handleClick} href="#canvas">Home</a>
+            <a onClick={handleClick} href="#scroll-to-about">About</a>
+            <a>Projects</a>
+            <a>Contact</a>
+            <a>
+                <Switch
+                    onChange={props.callBackHandleToggleDarkMode}
+                    checked={true}
+                    iconOff={<SunIcon filled />}
+                    iconOn={<MoonIcon filled />}
+                />
+            </a>
+        </nav>
+    </>);
 }

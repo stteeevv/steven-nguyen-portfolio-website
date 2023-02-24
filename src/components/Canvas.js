@@ -7,7 +7,6 @@ import particlesDark from "public/particlesDark.js";
 
 export default function Canvas(props) {
     let options = particlesDark;
-    //particles init
     const particlesInit = useCallback(async engine => {
         console.log(engine);
         await loadFull(engine);
@@ -15,40 +14,29 @@ export default function Canvas(props) {
     const particlesLoaded = useCallback(async container => {
         await console.log(container);
     }, []);
-    const getColor = () => {
-        var color = "#" + (Math.random().toString(16) + "000000").slice(2, 8)
-        return color;
-    }
+    options.particles.links.color = props.themeColor;
+    options.particles.color.value = props.themeColor;
     if(props.isDarkMode)
         options.background.color = 'black';
     else if (!props.isDarkMode) {
         options.background.color = '#FFFFFF';
     }
-    const [forceStateUpdate, setForceStateUpdate] = useState(true);
-    var [color, setColor] = useState('#53acb8');
-    const handleChangeBackground = () => {
-        var newColor = getColor();
-        setColor(newColor);
-        console.log(color);
-        options.particles.links.color = newColor;
-        options.particles.color.value = newColor;
-        setForceStateUpdate(!forceStateUpdate)
-    }
     return (<>
-        <div className={styles.canvas}>
+        <div id="canvas" className={styles.canvas}>
             <Particles className={styles.particles}
+                propToUpdate={props.resetCanvas}
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={options}
-                isDarkMode={props.isDarkMode}
-                propToUpdate={forceStateUpdate}
             />
             <div className={styles.container}>
-                    <TitleBox myProp={props.options} 
-                    onChangeBackground={handleChangeBackground} 
-                    nameColor={color}
-                    id="titleBox" isDarkMode={props.isDarkMode}/>
+                <TitleBox myProp={props.options} 
+                onChangeBackground={props.setThemeColor} 
+                nameColor={props.themeColor}
+                id="titleBox" 
+                isDarkMode={props.isDarkMode}
+            />
             </div>
         </div>
     </>);

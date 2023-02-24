@@ -13,7 +13,7 @@ const particlesDark = {
         events: {
             onClick: {
                 enable: true,
-                mode: "push",
+                mode: "attract",
             },
             onHover: {
                 enable: true,
@@ -23,7 +23,7 @@ const particlesDark = {
         },
         modes: {
             push: {
-                quantity: 1,
+                attract: 1,
             },
             repulse: {
                 distance: 100,
@@ -51,16 +51,16 @@ const particlesDark = {
             outModes: {
                 default: "bounce",
             },
-            random: false,
+            random: true,
             speed: 2,
-            straight: false,
+            straight: true,
         },
         number: {
             density: {
                 enable: true,
-                area: 800,
+                area: 1000,
             },
-            value: 100,
+            value: 160,
         },
         opacity: {
             value: 0.5,
@@ -69,7 +69,7 @@ const particlesDark = {
             type: "circle",
         },
         size: {
-            value: { min: 1, max: 3 },
+            value: { min: 1, max: 2 },
         },
     },
     detectRetina: true,

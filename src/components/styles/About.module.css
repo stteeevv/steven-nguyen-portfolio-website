@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 .container {
     height: 200vh;
     width: 100vw;
-    background-color: #0f0f0f;
+    background-color: #011826;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     /* border: 1px solid red; */
     height: 15vh;
+    width: 60%;
+    /* border: 1px red solid; */
 
 }
 .titleDescription {
@@ -20,7 +26,7 @@
     text-align: center;
 }
 .gradient {
-    background-image: linear-gradient(black, #0f0f0f);
+    background-image: linear-gradient(black, #011826);
     width: 100vw;
     height: 20vh;
 }
@@ -28,22 +34,25 @@
     color: white;
     font-size: 3vw;
     font-family: 'Raleway', sans-serif;
-    border-bottom: 2px solid white;
+    font-weight: 800;
+    padding: 20px;
+    /* border-bottom: 2px solid white; */
     padding-top: 2vh;
 }
 .text {
-    color: white;
+    color: gray;
     font-size: 1vw;
     font-family: 'Raleway', sans-serif;
 }
-.description, .description > div {
-    /* border: 1px solid red; */
+.description {
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
+    width: 80vw;
 }
-.description > div {
-    width: 10vw;
-    margin-inline: 20vw;
+
+.aboutDescription {
+    width: 10px;
 }

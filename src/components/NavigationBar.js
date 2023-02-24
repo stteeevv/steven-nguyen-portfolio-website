@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Switch, Navbar } from '@nextui-org/react';
 import { SunIcon } from 'public/sunIcon';
 import { MoonIcon } from 'public/moonIcon';
-import { Layout } from './layout';
 
 
 

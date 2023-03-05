@@ -16,13 +16,7 @@ export default function NavigationBar(props) {
     let isDark = props.isDarkMode;
     const [sticky, setSticky] = useState(false);
     const navRef = React.useRef(null);
-    const handleScroll = () => {
-        if(window.scrollY > navRef.current.offsetTop)
-            setSticky(true);
-        else
-            setSticky(false);
 
-    }
     return (<>
         {/* <Layout>
             <Navbar shouldHideOnScroll variant={sticky}>

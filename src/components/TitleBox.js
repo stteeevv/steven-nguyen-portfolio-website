@@ -25,8 +25,9 @@ export default function TitleBox(props) {
                 <span style={props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light} className={styles["title-text"]}>Hello, I&apos;m</span>
                 {/* <Tooltip content={"click me"} color={'invert'}> */}
                     <button>
-                        <span onClick={() => {props.onChangeBackground();}} id="name" style= {{'color': props.nameColor, "marginLeft": '.3em', backgroundImage: !props.isDarkMode ? 'linear-gradient(black, black)' : 'linear-gradient(white, white)'}} className={styles["title-text"] + " " + styles.name}> Steven Nguyen</span><span style={props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light} className={styles["title-text"]}>.</span>
+                        <span onClick={() => {props.onChangeBackground();}} id="name" style= {{'color': props.nameColor, "marginLeft": '.3em', backgroundImage: !props.isDarkMode ? 'linear-gradient(black, black)' : 'linear-gradient(white, white)'}} className={styles["title-text"] + " " + styles.name}> Steven Nguyen</span>
                     </button>
+                        <span style={props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light} className={styles["title-text"]}>.</span>
                 {/* </Tooltip> */}
             </div>
             <span style={props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light} className={styles["bottom-title-text"] + " " + styles["bottom-text"]}>I&apos;m an aspiring software engineer.</span>

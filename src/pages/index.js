@@ -4,6 +4,7 @@ import About from "@/components/About.js";
 import { useState} from 'react';
 import defaultCanvas from "public/particlesDark";
 import Head from 'next/head';
+import Projects from '@/components/Projects.js'
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -35,6 +36,7 @@ export default function Home() {
       callBackHandleToggleDarkMode={handleToggleDarkMode} 
       isDarkMode={isDarkMode}/>
       <About isDarkMode={isDarkMode}/>
+      <Projects/>
     </div>
   </>);
 }

@@ -1,58 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 .container {
-    height: 200vh;
-    width: 100vw;
-    background-color: #011826;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.title-container {
+    background-color: #07090f;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    /* border: 1px solid red; */
-    height: 15vh;
-    width: 60%;
-    /* border: 1px red solid; */
-
-}
-.titleDescription {
-    color: gray;
-    font-size: 1.5vh;
-    padding: 1vh;
-    width: 35vw;
-    text-align: center;
 }
 .gradient {
-    background-image: linear-gradient(black, #011826);
+    background-image: linear-gradient(black, #07090f);
     width: 100vw;
     height: 20vh;
 }
+.about_section {
+    padding-left: 10rem;
+}
 .textTitle {
     color: white;
-    font-size: 3vw;
+    font-size: 4rem;
     font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    padding: 20px;
-    /* border-bottom: 2px solid white; */
-    padding-top: 2vh;
-}
-.text {
-    color: gray;
-    font-size: 1vw;
-    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
 }
 .description {
-    border: 1px solid red;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 2vh; */
-    width: 80vw;
+    /* border: 1px red solid; */
+    padding-right: 30rem;
+    padding-top: 2rem;
 }
-
-.aboutDescription {
-    width: 10px;
+.descriptionText {
+    font-size: 1.25rem;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    padding-bottom: 1rem;
+}
+.education_section {
+    padding-left: 10rem;
+}
+.utdicon-wrapper {
+    /* padding-bottom: 1rem; */
+}
+.subTitle {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+}
+.gpa {
+    background-color: green;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 8px;
+    padding-inline: 8px;
+    color: lightgreen;
+    font-family: 'Raleway';
+    font-weight: 900;
+    animation: load ease-out .5s 1;
+}
+@keyframes load {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px)
+    }
 }

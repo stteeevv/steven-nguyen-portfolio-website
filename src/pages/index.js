@@ -34,7 +34,7 @@ export default function Home() {
       <NavigationBar 
       callBackHandleToggleDarkMode={handleToggleDarkMode} 
       isDarkMode={isDarkMode}/>
-      <About />
+      <About isDarkMode={isDarkMode}/>
     </div>
   </>);
 }

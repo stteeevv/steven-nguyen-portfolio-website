@@ -24,11 +24,19 @@ export default function NavigationBar(props) {
 
     }
     return (<>
-        {/* <Layout>
-            <Navbar shouldHideOnScroll variant={sticky}>
-            </Navbar>
-        </Layout> */}
-        <nav id="navbar" className={styles.navBar} style={{
+        <Navbar css={{$$navbarBackgroundColor: 'yellow', $$navbarBlurBackgroundColor: "rgba(0, 0, 0, 10)"}} shouldHideOnScroll variant={sticky}>
+            <Navbar.Content hideIn="xs" variant="underline">
+                <Navbar.Link href="#">Home</Navbar.Link>
+                <Navbar.Link href="#">About</Navbar.Link>
+                <Navbar.Link href="#">Projects</Navbar.Link>
+                <Navbar.Link href="#">Contact</Navbar.Link>
+            </Navbar.Content>
+        </Navbar>
+
+
+
+
+        {/* <nav id="navbar" className={styles.navBar} style={{
             // backgroundColor: isDark ? 'black' : 'white',
             color: isDark ? 'white' : 'black',
             position: sticky ? 'absolute' : 'sticky'
@@ -45,6 +53,6 @@ export default function NavigationBar(props) {
                     iconOn={<MoonIcon filled />}
                 />
             </a>
-        </nav>
+        </nav> */}
     </>);
 }

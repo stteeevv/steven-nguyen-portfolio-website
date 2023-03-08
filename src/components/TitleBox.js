@@ -30,7 +30,7 @@ export default function TitleBox(props) {
                         <span style={props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light} className={styles["title-text"]}>.</span>
                 {/* </Tooltip> */}
             </div>
-            <span style={props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light} className={styles["bottom-title-text"] + " " + styles["bottom-text"]}>I&apos;m an aspiring software engineer.</span>
+            <span style={props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light} className={styles["bottom-title-text"] + " " + styles["bottom-text"]}>I&apos;m an aspiring computer engineer.</span>
                 <button style={{
                     ...(props.isDarkMode ? toggleableStyles.dark : toggleableStyles.light),
                     backgroundColor: props.isDarkMode ? 'black' : 'white',

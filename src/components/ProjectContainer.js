@@ -31,10 +31,10 @@ export default function ProjectContainer(props) {
                 <Text h2 size={30}>{props.data.name}</Text>
             </Modal.Header>
             <Modal.Body>
-                <span style={{marginBottom: '0px'}}>Website: <a href={props.data.website} target="_blank" style={{color: props.data.website == "Unavailable" ? 'red' : 'blue'}}>{props.data.website}</a></span>
+                <span style={{marginBottom: '0px'}}>Website: <a rel="noreferrer" href={props.data.website} target="_blank" style={{color: props.data.website == "Unavailable" ? 'red' : 'blue'}}>{props.data.website}</a></span>
                 <span style={{marginBottom: '0px'}}>In use: <span style={{marginBottom: '0px', color: getAvailabilityColor(props.data.Availability)}}>{props.data.Availability}</span></span> 
-                <span style={{marginBottom: '0px'}}>Github: {props.data.githubLink == "Private" ? <span>Private</span>: <a style={{color: 'blue', textDecoration: 'underline'}} target="_blank" href={props.data.githubLink} src={props.data.githubLink}>{props.data.githubLink}</a>}</span>
-                <span>More information: <a style={{color: 'blue', textDecoration: 'underline'}} target="_blank" href={props.data.moreInformation} src={props.data.moreInformation}>{props.data.moreInformation}</a></span>
+                <span style={{marginBottom: '0px'}}>Github: {props.data.githubLink == "Private" ? <span>Private</span>: <a style={{color: 'blue', textDecoration: 'underline'}} target="_blank" rel="noreferrer" href={props.data.githubLink} src={props.data.githubLink}>{props.data.githubLink}</a>}</span>
+                <span>More information: <a style={{color: 'blue', textDecoration: 'underline'}} rel="noreferrer" target="_blank" href={props.data.moreInformation} src={props.data.moreInformation}>{props.data.moreInformation}</a></span>
                 <span>{props.data.description}</span>
             </Modal.Body>
         </Modal>

@@ -10,7 +10,7 @@
 .bottom-title-text {
     width: 0ch;
     opacity: 0;
-    animation: typing 2s steps(28) forwards, blink .5s step-end infinite alternate;
+    animation: typing 2s steps(30) forwards, blink .5s step-end infinite alternate;
     animation-delay: 2s;
     white-space: nowrap;
     overflow: hidden;
@@ -45,7 +45,7 @@
 @keyframes typing {
     to {
         opacity: 1;
-        width: 28ch;
+        width: 30ch;
     }
 }
     

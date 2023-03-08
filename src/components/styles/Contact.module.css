@@ -1,0 +1,24 @@
+.container {
+    background-color: #07090f;
+    height: 25vh;
+}
+.textTitle {
+    color: white;
+    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    padding-left: 10rem;
+}
+.textContainer {
+    padding-left: 10rem;
+}
+.text {
+    font-size: 1.25rem;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+.link {
+    font-size: 1.25rem;
+    font-family: 'Raleway', sans-serif;
+    color: lightblue;
+}

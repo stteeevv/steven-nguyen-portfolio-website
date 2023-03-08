@@ -26,8 +26,8 @@ export default function Canvas(props) {
             <Particles className={styles.particles}
                 propToUpdate={props.resetCanvas}
                 id="tsparticles"
-                init={particlesInit}
-                loaded={particlesLoaded}
+                // init={particlesInit}
+                // loaded={particlesLoaded}
                 options={options}
             />
             <div className={styles.container}>

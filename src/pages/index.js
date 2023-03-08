@@ -38,7 +38,7 @@ export default function Home() {
       isDarkMode={isDarkMode}/>
       <About isDarkMode={isDarkMode}/>
       <Projects isDarkMode={isDarkMode}/>
-      {/* <Contact/> */}
+      <Contact/>
     </div>
   </>);
 }

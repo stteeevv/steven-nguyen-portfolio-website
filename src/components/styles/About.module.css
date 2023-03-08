@@ -3,6 +3,7 @@
     background-color: #07090f;
     display: flex;
     flex-direction: column;
+    padding-bottom: 5rem;
 }
 .gradient {
     background-image: linear-gradient(black, #07090f);

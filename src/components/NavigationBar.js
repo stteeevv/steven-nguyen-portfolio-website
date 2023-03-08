@@ -23,22 +23,25 @@ export default function NavigationBar(props) {
             </Navbar>
         </Layout> */}
         <nav id="navbar" className={styles.navBar} style={{
-            // backgroundColor: isDark ? 'black' : 'white',
-            color: isDark ? 'white' : 'black',
-            position: sticky ? 'absolute' : 'sticky'
+            backgroundColor: props.isDark ? 'rgba(0, 0, 0, 0)' : "rgba(224, 224, 224, 0)",
+            color: isDark ? '#e0e0e0' : 'black',
+            position: sticky ? 'absolute' : 'sticky',
+            zIndex: '10',
+            paddingRight: '1rem',
+            textShadow: isDark ? "1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000" : null
         }}>
             <a role="button" onClick={handleClick} href="#canvas">Home</a>
             <a onClick={handleClick} href="#scroll-to-about">About</a>
-            <a>Projects</a>
-            <a>Contact</a>
-            <a>
+            <a onClick={handleClick} href="#scroll-to-projects">Projects</a>
+            {/* <a>Contact</a> */}
+            {/* <a>
                 <Switch
                     onChange={props.callBackHandleToggleDarkMode}
                     checked={true}
                     iconOff={<SunIcon filled />}
                     iconOn={<MoonIcon filled />}
                 />
-            </a>
+            </a> */}
         </nav>
     </>);
 }

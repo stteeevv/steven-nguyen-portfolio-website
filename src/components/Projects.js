@@ -11,7 +11,7 @@ export default function Projects() {
     })
     return (<>
         <div style={{backgroundColor: '#07090f'}} className={styles.container}>
-            <h1>Projects</h1>
+            <h1 id="scroll-to-projects">Projects</h1>
             <div className={styles.Projects_container}>
 
             {/* <Grid.Container alignContent="space-between" gap={10} justify="center">

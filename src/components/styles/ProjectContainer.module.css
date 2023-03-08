@@ -1,0 +1,5 @@
+.availability::before {
+    content: " ";
+    display: inline-block;
+    color: white;
+}

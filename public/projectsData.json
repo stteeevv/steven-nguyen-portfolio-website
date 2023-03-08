@@ -4,20 +4,52 @@
         {
             "name": "Integral Calculator",
             "isOnline": false,
-            "githubLink": "www.google.com",
-            "image": "/integral.png"
+            "Availability": "Offline",
+            "githubLink": "https://github.com/stteeevv/school-projects/tree/master/fall2022/project-three",
+            "image": "/integral.png",
+            "description": "This project is my implementation of an integral calculator in Java that can calculate both indefinite and definite integrals of polynomials in standard form. I used my own implementation of a binary search tree which also used generics to organize and calculate the antiderivative of individual terms within the polynomial in O(log(n)) time complexity. ",
+            "website": "",
+            "moreInformation": ""
         },
         {
-            "name": "test"
+            "name": "Portfolio Website",
+            "isOnline": true,
+            "Availability": "Online",
+            "githubLink": "https://github.com/stteeevv/stevennguyen-website",
+            "image": "/websiteProject.png",
+            "description": "My portfolio website is built using the latest web development technologies such as Next.js, React, Bootstrap, NextUI, and Vercel. With a clean and modern design, it showcases my professional experience, skills, and projects. The website is developed with HTML, CSS, and JavaScript, and is optimized for fast loading times and responsiveness.",
+            "website": "https://steven-nguyen-portfolio-website.vercel.app/",
+            "moreInformation": ""
         },
         {
-            "name": "test2"
+            "name": "Arduino Bluetooth Miata Headlights",
+            "isOnline": true,
+            "Availability": "Online",
+            "githubLink": "https://github.com/stteeevv/school-projects/tree/master/spring2022/miata%20headlights%20project",
+            "image": "/miataProject.png",
+            "description": "Our academic project involved the use of an Arduino microcontroller and a Bluetooth module to create a wireless connection between our phone and a 1995 Mazda MX-5 Miata. By soldering wires and using relays, we were able to toggle the pop-up headlights on the car remotely using a custom mobile app. The project required a strong understanding of electronics and programming, and allowed us to gain hands-on experience in both fields. Overall, it was a challenging and rewarding project that showcased our technical skills and creativity.",
+            "website": "",
+            "moreInformation": "https://www.youtube.com/watch?v=s1HbkXyK6gg"
         },
         {
-            "name": "test3"
+            "name": "IEEE UTD Website",
+            "isOnline": false,
+            "Availability": "Under Construction",
+            "githubLink": "Private",
+            "image": "/ieeeproject.png",
+            "description": "The Institute of Electrical and Electronics Engineers (IEEE) is a professional organization that promotes the advancement of technology and engineering. As part of a team, I helped develop a website for the IEEE using modern web technologies such as Next.js, React, Bootstrap, NextUI, Vercel, HTML, CSS, and JavaScript. Our goal was to create a user-friendly platform that would showcase the club's events, projects, and resources to its members and the wider community. We met regularly to discuss the project's progress, address any issues, and plan new features. To streamline our workflow, we used Figma and Git to collaborate on design and code. The result is a sleek and functional website that reflects the professionalism and innovation of IEEE.",
+            "website": "",
+            "moreInformation": ""
         },
         {
-            "name": "test4"
+            "name": "AIAA UTD Website",
+            "isOnline": false,
+            "Availability": "Under Construction",
+            "githubLink": "Private",
+            "image": "/aiaaproject.png",
+            "description": "As the lead web developer for the American Institute of Aeronautics and Astronautics (AIAA), I am currently overseeing the development of a new website using modern web technologies such as Next.js, React, Bootstrap, NextUI, Vercel, HTML, CSS, and JavaScript. The website is being designed to be user-friendly and informative, showcasing the club's events, projects, and resources to its members and the public. I am working closely with a team of designers, developers, and content creators to ensure that the website meets the club's needs and exceeds its expectations. Regular meetings and communication with the team are crucial to our progress, and we are using tools like Figma and Git to streamline our workflow and collaboration. The result will be a functional and visually appealing website that reflects the professionalism and innovation of the AIAA.",
+            "website": "",
+            "moreInformation": ""
         }
     ]
 }

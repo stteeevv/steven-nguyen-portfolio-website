@@ -8,7 +8,7 @@ const particlesDark = {
     style: {
         position: "absolute"
     },
-    fpsLimit: 500,
+    fpsLimit: 120,
     interactivity: {
         events: {
             onClick: {
